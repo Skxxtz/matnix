@@ -11,5 +11,6 @@
       allow_federation = false;
       allow_check_for_updates = false;
       trusted_servers = [ "matrix.org" ];
+    };
   };
-};
+}

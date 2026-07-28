@@ -10,16 +10,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, agenix, ... }: {
-    nixosConfigurations.matrix = nixpkgs.lib.nixosSystem {
-      system = "aarch64-linux";
-      modules = [
-	./hardware-configuration.nix
-        ./modules
-	./secrets/secrets.nix
-        agenix.nixosModules.default
-        nixos-hardware.nixosModules.raspberry-pi-3
-      ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixos-hardware,
+      agenix,
+      ...
+    }:
+    {
+      nixosConfigurations.matrix = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          ./hardware-configuration.nix
+          ./modules
+          ./secrets/secrets.nix
+          agenix.nixosModules.default
+          nixos-hardware.nixosModules.raspberry-pi-3
+        ];
+      };
     };
-  };
 }

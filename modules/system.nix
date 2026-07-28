@@ -6,7 +6,7 @@
 
   zramSwap = {
     enable = true;
-    memoryPercent = 100
+    memoryPercent = 100;
   };
 
   services.journald.extraConfig = ''
