@@ -1,7 +1,7 @@
 { config, ... }:
 {
-  age.secrets.mautrixWhatsappPickle.file = "../../secrets/mautrix-whatsapp-pickle.age";
-  age.secrets.mautrixWhatsappTokens.file = "../../secrets/mautrix-whatsapp-tokens.age";
+  age.secrets.mautrixWhatsappPickle.file = ../../secrets/mautrix-whatsapp-pickle.age;
+  age.secrets.mautrixWhatsappTokens.file = ../../secrets/mautrix-whatsapp-tokens.age;
 
   services.mautrix-whatsapp = {
     enable = true;
