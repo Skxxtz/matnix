@@ -3,10 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +13,6 @@
     {
       self,
       nixpkgs,
-      nixos-hardware,
       agenix,
       ...
     }:
@@ -28,7 +23,6 @@
           ./hardware-configuration.nix
           ./modules
           agenix.nixosModules.default
-          nixos-hardware.nixosModules.raspberry-pi-3
         ];
       };
     };

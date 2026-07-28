@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
+  boot.loader.grub.enable = false;
+  boot.loader.generic-extlinux-compatible.enable = true;
   boot.loader.timeout = 3;
+  boot.kernelPackages = pkgs.linuxPackages_rpi3;
+
   nixpkgs.hostPlatform = "aarch64-linux";
   nixpkgs.config.permittedInsecurePackages = [ "olm-3.2.16" ];
 
