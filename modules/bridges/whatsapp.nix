@@ -5,6 +5,7 @@
 
   services.mautrix-whatsapp = {
     enable = true;
+    environmentFile = config.age.secrets.mautrixWhatsappTokens.path;
     settings = {
       homeserver = {
         address = "http://127.0.0.1:${toString config.matrixSite.conduitPort}";
@@ -36,8 +37,6 @@
         history_sync.request_full_sync = true;
         identity_change_notices = true;
       };
-
-      environmentFile = config.age.secrets.mautrixWhatsappTokens.path;
     };
   };
 }

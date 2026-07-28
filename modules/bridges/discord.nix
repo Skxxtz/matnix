@@ -4,6 +4,7 @@
 
   services.mautrix-discord = {
     enable = true;
+    environmentFile = config.age.secrets.mautrixDiscordTokens.path;
     settings = {
       homeserver = {
         address = "http://127.0.0.1:${toString config.matrixSite.conduitPort}";
@@ -34,8 +35,6 @@
         default = true;
         self_sign = true;
       };
-
-      environmentFile = config.age.secrets.mautrixDiscordTokens.path;
     };
   };
 }
