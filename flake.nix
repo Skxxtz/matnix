@@ -2,7 +2,7 @@
   description = "matrix.skxxtz.de - Conduit + bridges on Raspberry Pi 3B+";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.12";
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
