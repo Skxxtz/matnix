@@ -2,7 +2,7 @@
 {
   age.secrets.mautrixDiscordTokens.file = ../../secrets/mautrix-discord-tokens.age;
 
-  service.mautrix-discord = {
+  services.mautrix-discord = {
     enable = true;
     settings = {
       homeserver = {
