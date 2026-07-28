@@ -7,4 +7,5 @@ in
   "mautrix-whatsapp-pickle.age".publicKeys = allKeys;
   "mautrix-whatsapp-tokens.age".publicKeys = allKeys;
   "mautrix-discord-tokens.age".publicKeys = allKeys;
+  "mautrix-instagram-tokens.age".publicKeys = allKeys;
 }
