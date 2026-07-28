@@ -24,7 +24,6 @@
         modules = [
           ./hardware-configuration.nix
           ./modules
-          ./secrets/secrets.nix
           agenix.nixosModules.default
           nixos-hardware.nixosModules.raspberry-pi-3
         ];
