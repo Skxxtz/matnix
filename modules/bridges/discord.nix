@@ -1,0 +1,37 @@
+{ config, ... }:
+{
+  age.secrets.mautrixDiscordTokens.file = ../../secrets/mautrix-discord-tokens.age;
+
+  service.mautrix-discord = {
+    enable = true;
+    settings = {
+      homeserver = {
+        address = "http://127.0.0.1:${toString config.matrixSite.conduitPort}";
+	domain = config.mautrixSite.domain;
+      };
+
+      appservice = {
+        address = "http://127.0.0.1:29319";
+	hostname = "127.0.0.1";
+	port = 29319;
+	id = "discord";
+	database = {
+	  type = "sqlite3-fk-wal";
+	  uri = "/var/lib/mautrix-discord/mautrix-discord.db";
+	};
+      };
+
+      bridge.permissions = {
+	"${config.matrixSite.domain}" = "user";
+	"@admin:${config.matrixSite.domain}" = "admin";
+      };
+
+      bridge.encryption = {
+        allow = true;
+	default = true;
+	self_sign = true;
+      };
+
+      environmentFile = config.age.secrets.mautrixDiscordTokens.path;
+  };
+}
