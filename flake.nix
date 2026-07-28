@@ -17,7 +17,7 @@
       ...
     }:
     {
-      nixosConfigurations.matnix = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.matrix = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [
           ./hardware-configuration.nix
