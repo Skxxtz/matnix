@@ -7,7 +7,7 @@
     settings = {
       homeserver = {
         address = "http://127.0.0.1:${toString config.matrixSite.conduitPort}";
-        domain = config.mautrixSite.domain;
+        domain = config.matrixSite.domain;
       };
 
       appservice = {
