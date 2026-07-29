@@ -27,12 +27,12 @@
         };
       };
 
-      bridge.permissions = {
+      permissions = {
         "${config.matrixSite.domain}" = "user";
         "@admin:${config.matrixSite.domain}" = "admin";
       };
 
-      bridge.encryption = {
+      encryption = {
         allow = true;
         default = true;
         self_sign = true;
