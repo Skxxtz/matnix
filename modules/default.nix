@@ -10,6 +10,6 @@
 
     ./bridges/whatsapp.nix
     ./bridges/discord.nix
-    ./bridges/instagram.nix
+    # ./bridges/instagram.nix
   ];
 }
