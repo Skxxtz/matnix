@@ -27,7 +27,7 @@
         };
       };
 
-      permissions = {
+      bridge.permissions = {
         "${config.matrixSite.domain}" = "user";
         "@admin:${config.matrixSite.domain}" = "admin";
       };
